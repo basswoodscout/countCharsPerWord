@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<meta name="description" content="Word average">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  
+<textarea rows="4" cols="50" id="myText">
+hi world 
+</textarea>
+  <br><br>
+   <input type="submit" value="Submit" id = "mySubmit">
+  <br><br>
+  
+  <Div id = "myOutput">---</Div>
+<script id="jsbin-javascript">
+console.clear();
+$( "#mySubmit" ).click(function() {
+//var myText = "Today is Thursday March 17th, St. Patricks Day, wear green today.";
+console.clear();
+var myText = $("#myText").val();
+console.log(myText);
+myTextTrim = myText.trim();
+var myTextCharLen = myTextTrim.length;
+console.log("total char: "+myTextCharLen);
+var myWords = myTextTrim.split(" ");
+var myWordsLen = myWords.length;
+console.log(myWordsLen);
+console.log(myWords);
+console.log(myWords[2]);
+var myAvg = myTextCharLen / myWordsLen;
+myAvg = Math.round(myAvg * 100) / 100;
+console.log(myAvg);
+console.log("average letters pre word: "+myAvg);
+  
+  
+ $("#myOutput").html("total char: "+myTextCharLen + "<br>total words: " + myWordsLen + "<br>Avgerage letters per word: " + myAvg); 
+  
+  
+  
+});
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">console.clear();
+$( "#mySubmit" ).click(function() {
+//var myText = "Today is Thursday March 17th, St. Patricks Day, wear green today.";
+console.clear();
+var myText = $("#myText").val();
+console.log(myText);
+myTextTrim = myText.trim();
+var myTextCharLen = myTextTrim.length;
+console.log("total char: "+myTextCharLen);
+var myWords = myTextTrim.split(" ");
+var myWordsLen = myWords.length;
+console.log(myWordsLen);
+console.log(myWords);
+console.log(myWords[2]);
+var myAvg = myTextCharLen / myWordsLen;
+myAvg = Math.round(myAvg * 100) / 100;
+console.log(myAvg);
+console.log("average letters pre word: "+myAvg);
+  
+  
+ $("#myOutput").html("total char: "+myTextCharLen + "<br>total words: " + myWordsLen + "<br>Avgerage letters per word: " + myAvg); 
+  
+  
+  
+}); 
+  
+  
+  
+  </script></body>
+</html>
